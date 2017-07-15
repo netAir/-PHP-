@@ -47,7 +47,7 @@ class ProductBuilder
     protected $productObject;
     protected $configs;
 
-    public function __construct($configs)
+    public function __construct(array $configs)
     {
         $this->configs=$configs;
         $this->productObject=new Product();
