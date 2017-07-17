@@ -10,13 +10,14 @@ class Playlist
 {
     private $songs = [];
 
-    public function addSong($location, $title)
+    public function addSong(string $location, string $title)
     {
         $song = ['location' => $location, 'title' => $title];
         $this->songs[] = $song;
     }
 
-    public function getM3U()
+    public
+    function getM3U()
     {
         $m3u = '';
         /*
@@ -26,7 +27,8 @@ class Playlist
         return $m3u;
     }
 
-    public function getPLS()
+    public
+    function getPLS()
     {
         $pls = '';
         /*
@@ -56,13 +58,13 @@ class NewPlaylist
     private $songs = [];
     private $typeObject;
 
-    public function __construct($type)
+    public function __construct(string $type)
     {
         $object = $type . 'PlaylistDelegate';
         $this->typeObject = new $object;
     }
 
-    public function addSong($location, $title)
+    public function addSong(string $location, string $title)
     {
         $song = ['location' => $location, 'title' => $title];
         $this->songs[] = $song;
@@ -76,7 +78,7 @@ class NewPlaylist
 
 class M3UPlaylistDelegate
 {
-    public function getPlaylist($songs)
+    public function getPlaylist(array $songs)
     {
         $m3u = '';
         /*
@@ -89,7 +91,7 @@ class M3UPlaylistDelegate
 
 class PLSPlayListDelegate
 {
-    public function getPlaylist($songs)
+    public function getPlaylist(array $songs)
     {
         $pls = '';
         /*
@@ -102,4 +104,4 @@ class PLSPlayListDelegate
 
 $type = 'PLS';
 $playlist = new NewPlaylist($type);
-$playlistContent=$playlist->getPlaylist();
+$playlistContent = $playlist->getPlaylist();
