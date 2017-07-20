@@ -42,7 +42,7 @@ $externalPurchaseInfoBandID = 12;
 $bandMixProto = new MixtapeCD($externalPurchaseInfoBandID);
 $externalPurchaseInfo = [];
 $externalPurchaseInfo[] = ['brrr', 'goodbye'];
-$externalPurchaseInfo[] = ['whate it means', 'brrr'];
+$externalPurchaseInfo[] = ['what it means', 'brrr'];
 
 foreach ($externalPurchaseInfo as $mixed) {
     $cd = clone $bandMixProto;
