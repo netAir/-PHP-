@@ -27,7 +27,7 @@ class InventoryConnection
         var_dump('执行链接数据库操作');
     }
 
-    public function updateQuantity($band, $title, $number)
+    public function updateQuantity(string $band, string $title, string $number)
     {
         //......
     }
@@ -38,7 +38,7 @@ class CD
     protected $title;
     protected $band;
 
-    public function __construct($title, $band)
+    public function __construct(string $title, string $band)
     {
         $this->title = $title;
         $this->band = $band;
