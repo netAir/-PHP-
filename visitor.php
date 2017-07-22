@@ -24,7 +24,7 @@ class CD
         //假装这里会做些什么..
     }
 
-    public function acceptVisitor($visitor)
+    public function acceptVisitor(Visitor $visitor)
     {
         $visitor->visitCD($this);
     }
